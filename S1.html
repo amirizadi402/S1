@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Script...</title>
+        <style>
+            
+            html{
+                background-color:white;
+            }
+            p{
+                border:1px solid black;
+                border-radius:5px;
+                padding:20px;
+                font-size:25px;
+                display:inline;
+                color:black;
+                background-color:white;
+                margin-Left:450px;
+            }
+            p:hover{
+                color:greenYellow;
+            }
+            div{
+                border:1px solid black;
+                padding:30px;
+                background-color:lightblue;
+                border-radius:5px;
+                margin:20px;
+            }
+        .Content
+        {
+            border:1px solid black;
+                padding:30px;
+                border-radius:5px;
+                width:inherit;
+                height:500px;
+                margin:20px;
+        }
+        .Footer{
+            border:1px solid black;
+            padding:30px;
+            border-radius:5px;
+            width:inherit;
+            height:
+            inherit;
+            background-color:lightblue;
+        }
+        table tr td{
+            color:black;
+            padding:10px;
+            border-style:none;
+            font-size:20px;
+        }
+        table tr{
+            background-color:#cbf2f1;
+        }
+        table{
+            margin-left:520px;
+            background-color:white;
+            border:0;
+            
+
+        }
+        .TT{
+            font-weight:bold;
+            background-color:aqua;
+
+        }
+
+       fieldset{
+           width:300px;
+           margin-left:450px;
+       } */
+        </style>
+       
+    </head>
+    <body>
+        <script>           
+        let Data={Name:"",Family:"",Age:0};
+        let State=false;
+        let i=0;
+        function Person(Name,Family,Age)
+        {
+            this.Name=Name;
+            this.Family=Family;
+            this.Age=Age;
+        }
+        let p=new Person();
+        let Dp={};
+       
+        State=confirm("Are You Want Insert Information ? ");
+        while(State)
+        {
+            p=new Person();
+           p.Name=prompt("Name");
+           p.Family=prompt("Family");
+           p.Age=prompt("Age");
+          
+        Dp[i]=p;
+        State=confirm("Are You Want Insert Another Information ? ");
+        i+=1;
+        }
+        document.write("<div><p>Well Come To Java Script...</p></div>");
+            document.write("<div class='Content'>");
+        document.write("<table border='1'>")
+        document.write("<tr class='TT'><td>Name</td><td>Family</td><td>Age</td></tr>");
+        for(let s=0;s<i;s++)
+        {
+           let u=new Person();
+           u=Dp[s];
+           document.write("<tr><td>"+u.Name+"</td><td>"+u.Family+"</td><td>"+u.Age+"</td></tr>");
+    
+           
+        }
+        document.write("</table>");
+        document.write("</div>");
+        </script>
+        
+        <div class="Footer">
+            <p>&copy; All Rights Reserved</p>
+        </div>
+    </body>
+</html>
